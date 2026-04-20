@@ -1,4 +1,4 @@
-public class Transaction implements HasMenu {
+public class Transaction{
 	private String date;
 	private double amount;
 	private String memo;
@@ -19,9 +19,6 @@ public class Transaction implements HasMenu {
 
 	public void menu() {
 		System.out.println("---Transaction Menu---");
-	}
-
-	public void start() {
 	}
 	
 	public void printTransaction() {
