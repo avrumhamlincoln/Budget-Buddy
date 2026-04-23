@@ -27,6 +27,10 @@ public class PersonalTracker{
 		this.transactions.add(newTrans);
 	}
 
+	public double getBalance(){
+		return this.balance;
+	}
+
 	public void getTransactions(){
 		int tranNum = 1;
 	

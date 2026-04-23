@@ -47,7 +47,7 @@ public abstract class User implements HasMenu{
 		this.personalTracker.getTransactions();
 	}
 	
-	private double getDouble(){
+	protected double getDouble(){
 		Scanner input =  new Scanner(System.in);
 		String restultString = input.nextLine();
 		double result = 0d;
@@ -75,3 +75,5 @@ public abstract class User implements HasMenu{
 	public void start() {
 	}
 }
+
+class UserList extends java.util.ArrayList<User> {}

@@ -47,7 +47,7 @@ public class Main{
 				boolean found = false;
 
 				for (User user : masterList){
-					if (u.getUsername().equals(username)){
+					if (user.getUsername().equals(username)){
 						found = true;
 
 						if (user.login()){
@@ -77,5 +77,3 @@ public class Main{
 		}
 	}
 }
-
-class UserList extends java.util.ArrayList<User> {}
