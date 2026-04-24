@@ -64,8 +64,8 @@ public class Main{
 			}
 
 			else if (choice.equals("2")){
-				User newUser = new PersonalUser();
-				masterList.add(newUser);
+				User user = new User();
+				masterList.add(user);
 			}
 
 			else if (choice.equals("0")){
