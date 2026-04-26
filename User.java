@@ -214,7 +214,26 @@ public class User implements HasMenu{
 					for (User user : familyMembers){
 						System.out.println("\n---" + user.username + "'s Transactions---");
 						user.getReport();			
-					}					
+					}
+					
+					System.out.println("\n--- Budget Overview ---");
+					
+					double totalBudget = 0.00;
+
+					for (User user : familyMembers){
+						totalBudget += user.personalTracker.getBalanceGoal();
+					}
+
+					String famBudget = String.format("%.2f", totalBudget);
+					System.out.println("Budget amount: $" + famBudget);
+					
+					double totalBalance = 0.00;
+
+					for (User user :familyMembers){
+						totalBalance += user.personalTracker.getBalance();
+					}
+					String famBalance = String.format("%.2f", totalBalance);
+					System.out.println("Current Balance: $" + famBalance);					
 				}
 
 				else if (choice.equals("3")){

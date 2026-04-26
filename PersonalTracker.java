@@ -31,6 +31,11 @@ public class PersonalTracker{
 			this.balanceGoal = 0;
 		}
 	}
+
+	public double getBalanceGoal(){
+		return this.balanceGoal;
+	}
+
 	public void increaseBalance(double amount){
 		this.balance = this.balance + amount;
 	}
