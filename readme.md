@@ -1,35 +1,28 @@
 ```mermaid
 classDiagram
     class HasMenu {
-        <<interface>>
-        + menu() void
+        + menu() String
         + start() void
     }
 
     class Main {
-    
+        + masterList array list
+        + save() void
+        + load() void
     }
 
     class User {
-        <<abstract>>
         # username: String
         # password: String
         # personalTracker: PersonalTracker
+        # familyMembers: UserList
+        + User()
         + login() boolean
         + getTracker() PersonalTracker
         + getReport() void
-        # getDouble()
-        + menu() void
-        + start() void
-    }
-
-    class PersonalUser {
-        + manageTransactions() void
-        + start() void
-    }
-
-    class HouseholdUser {
-        + reviewHousehold(members array list) void
+        # getDouble() double
+        + menu() String
+        + addFamilyMember() void
         + start() void
     }
 
@@ -37,30 +30,38 @@ classDiagram
         - balanceGoal: double
         + balance: double
         - transactions: TransList
-        - PersonalTracker() const
+        - formattedBalanceGoal: String
+        - formattedBalance: String
+        + PersonalTracker(goal: double)
         + setBalanceGoal(goal: double) void
+        + getBalanceGoal(double goal)
         + increaseBalance(amount: double) void
         + decreaseBalance(amount: double) void
         + storeTransaction(newTrans: Transaction) void
+        + getBalance() void
         + getTransactions() void
+        + removeLastTran() void
+        + getTranSumary() void
     }
 
     class Transaction {
         - date: String
         - amount: double
         - memo: String
-        + Transaction(String Date, double Amount, String Memo) cosnt
+        - formattedAmount: String
+        + Transaction(date: String, amount: double, memo: String)
         + incomeTrans(tracker: PersonalTracker) void
         + expenseTrans(tracker: PersonalTracker) void
+        + menu() String
         + printTransaction() void
-        + menu() void
-        + start() void
+        + getMemo() String
+        + getAmount() double
+        + getFormattedAmount() String
     }
 
-    HasMenu <.. User
-    HasMenu <.. Transaction
-    User <-- PersonalUser
-    User <-- HouseholdUser
+    HasMenu <|.. User
+    HasMenu <|.. Transaction
+    Main <-- User
     User <-- PersonalTracker
     PersonalTracker <-- Transaction
 ```
