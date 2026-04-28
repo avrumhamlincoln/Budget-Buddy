@@ -318,5 +318,64 @@ start()
             print "must choose good value"
 ```
 
+# Main()
+```
+main()
+    load()
+    print menu
+    keepGoing = True
 
+    While keepGoing:
+        if choice is login
+            if there are no users
+            print "no users"
+            make new user
+            add user to masterList
 
+            ask for username
+            i = 0
+            found = false
+            while i is less than the size of masterList AND not found
+                if username is correct
+                    if login()
+                        start()
+                i++
+
+            if not found
+                print "user not found"
+    
+        if choice is create account
+                create a new user
+                add user to masterList
+
+        if choice is exit
+            keepGoing = false
+
+    save()
+
+save()
+    try
+        create a fileOutputStream for Buddy.dat
+        create a new ObjectOutputStream
+        write masterList
+        close everything
+    catch
+        return the error
+
+load()
+    try
+        create a fileInputStream for Buddy.dat
+        create a new ObjectInputStream
+        read masterList
+        close everything
+    catch
+        return the error
+```
+
+I do not have an admin login for this program because it is intended to be used by the user, and there is no need for someone to have access to all of the user data. 
+I have not used any algorithms other than the ones listed in this documentation, and all of what I have done are algorithms that we have learned in class.
+There are no special extensions needed to run this program. It is designed to run in the terminal with nothing but what is included in this repo.
+You can run this program with the standard make run.
+
+Thank you for such a great semester. This is by far the class that has taught me the most new skills, and I have been able to make some pretty cool programs with them. I hope you have a restful summer! -Avrum
+                
